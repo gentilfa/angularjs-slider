@@ -1061,6 +1061,10 @@
                 tick.valueTooltipPlacement = self.options.vertical
                   ? 'right'
                   : 'top'
+              }else if(self.options.stepsArray[value].tooltip){
+              	//custom tooltip: if in stepsArray element exist a 'tooltip' element, view this value in a tooltip
+              	tick.valueTooltip = self.options.stepsArray[value].tooltip;
+                tick.valueTooltipPlacement = self.options.vertical ? 'right' : 'top';
               }
             }
             if (self.getLegend) {
